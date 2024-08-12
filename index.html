@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Listings</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Property Listings</h1>
+      <div class="filters">
+        <select id="location-filter">
+          <option value="">Location</option>
+          <option value="city">City</option>
+          <option value="suburb">Suburb</option>
+        </select>
+        <select id="price-filter">
+          <option value="">Price Range</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <select id="bedrooms-filter">
+          <option value="">Bedrooms</option>
+          <option value="1">1 Bedroom</option>
+          <option value="2">2 Bedrooms</option>
+          <option value="3">3+ Bedrooms</option>
+        </select>
+        <select id="amenities-filter">
+          <option value="">Amenities</option>
+          <option value="pool">Pool</option>
+          <option value="wifi">Wi-Fi</option>
+          <option value="parking">Parking</option>
+        </select>
+      </div>
+    </header>
+
+    <section class="property-list">
+      <!-- Example Property Item -->
+      <div class="property-item">
+        <img
+          src="https://cdn.pixabay.com/photo/2019/01/30/08/14/house-3963987_640.jpg"
+          alt="Property Image"
+        />
+        <h2>Beautiful Apartment</h2>
+        <p>Location: City</p>
+        <p>Price: $200/night</p>
+        <p>Bedrooms: 2</p>
+        <button class="book-now">Book Now</button>
+      </div>
+      <!-- Repeat for more properties -->
+    </section>
+
+    <section class="cart">
+      <h2>Your Cart</h2>
+      <div class="cart-items">
+        <!-- Example Cart Item -->
+        <div class="cart-item">
+          <h3>Beautiful Apartment</h3>
+          <p>Booking Date: <input type="date" /></p>
+          <p>Price: $200/night</p>
+          <button class="remove">Remove</button>
+        </div>
+      </div>
+      <h3>Total: $<span id="cart-total">0</span></h3>
+    </section>
+
+    <section class="checkout">
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <label for="contact-name">Name:</label>
+        <input type="text" id="contact-name" required />
+
+        <label for="contact-email">Email:</label>
+        <input type="email" id="contact-email" required />
+
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method">
+          <option value="credit-card">Credit Card</option>
+          <option value="paypal">PayPal</option>
+        </select>
+
+        <button type="submit">Complete Booking</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
